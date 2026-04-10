@@ -173,7 +173,7 @@ public class Main {
 
             }
             System.out.println("Score x " + xWins +"-"+ oWins + " o " );
-
+            reset();
             if (xWins == roundsToWin){
                 System.out.println("Congrats player X win!");
                 break;
@@ -262,6 +262,14 @@ public class Main {
                 return false;
         }
         return true;
+        }
+    public static void reset(){ // this method to clean the board after each round
+        char place = '1';
+        for (int i = 0; i < board.length; i++){
+            for (int j = 0; j < board[i].length; j++){
+                board[i][j] = place++;
+            }
+            }
         }
 
     }
